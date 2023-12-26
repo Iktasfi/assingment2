@@ -4,6 +4,7 @@ import SOMEPACKAGE.Employee;public class MyApplication {
         Employee paramEmployee = new Employee("John", "Lennon", "Manager", 50000.0);
         System.out.println(paramEmployee);
 
+
         // Create a parameterized person
         Person paramPerson = new Person("John", "Lennon");
         System.out.println(paramPerson);
