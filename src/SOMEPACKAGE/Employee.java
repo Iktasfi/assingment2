@@ -8,15 +8,15 @@ public class Employee extends Person {    // Static variable to automatically se
     }    // Parameterized constructor
     public Employee(String name, String surname, String position, double salary) {
         // Call the default constructor to set the ID
-        this.name = name;
-        this.surname = surname;
-        this.position = position;
-        this.salary = salary;
+        super(name, surname);
+        setPosition(position);
+        setSalary(salary);
     }
+
     // toString method
     @Override
     public String toString() {
-        return "Employee: " + id + ". " + name + " " + surname;
+        return  position + ": " + id + ". " + name + " " + surname;
     }
     // Getters and setters
 
@@ -30,7 +30,7 @@ public class Employee extends Person {    // Static variable to automatically se
         return salary;
     }
     public void setSalary(double salary) {
-    this.salary = salary;
+        this.salary = salary;
     }
 
 }

@@ -6,10 +6,10 @@ public class Student  extends Person{
 
     }
     // Parameterized constructor
+
     public Student(String name, String surname, double gpa) {
-        this.name = name;
-        this.surname = surname;
-        this.gpa = gpa;
+        super(name, surname);
+        setGpa(gpa);
     }
     @Override
     public String toString() {

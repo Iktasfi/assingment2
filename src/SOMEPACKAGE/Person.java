@@ -11,8 +11,8 @@ public class Person {
     // Parameterized constructor
     public Person(String name, String surname) {
         this(); // Call the default constructor to set the ID
-        this.name = name;
-        this.surname = surname;
+        setName(name);
+        setSurname(surname);
     }
     public int getId() {
         return id;
