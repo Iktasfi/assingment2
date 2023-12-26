@@ -19,7 +19,9 @@ public class Main {
         Student AITUStudent = new Student("Artyom", "Lennon", 3.8);
         System.out.println(AITUStudent);
     }
+    /*
     public void printData(Iterable<Person>){
 
     }
+     */
 }
