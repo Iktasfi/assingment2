@@ -7,7 +7,6 @@ public abstract class Person implements Payable, Comparable<Person> {
     protected String surname;
     @Override
     public int compareTo(Person otherPerson) {
-        // Compare based on salary
         return Double.compare(this.getPaymentAmount(), otherPerson.getPaymentAmount());
     }
     public Person() {
@@ -35,10 +34,10 @@ public abstract class Person implements Payable, Comparable<Person> {
     }
     @Override
     public String toString() {
-        return "Student: " + id + ". " + name + " " + surname;
+        return getPosition()+ ": " + id + ". " + name + " " + surname;
     }
     public String getPosition(){
-        return null;
+        return "Student";
     }
     //string getPosition() – method (should return either the appropriate position or text “Student”)
     // Method to get the position    public String getPosition() {

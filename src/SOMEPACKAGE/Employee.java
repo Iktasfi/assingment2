@@ -14,17 +14,14 @@ public class Employee extends Person {
     }
 
     @Override
-    public String toString() {
-            return  getPosition() + ": " + id + ". " + name + " " + surname;
-    }
-
-    @Override
     public String getPosition() {
         return position;
     }
+
     public void setPosition(String position) {
         this.position = position;
     }
+
     public double getSalary() {
         return salary;
     }
