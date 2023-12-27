@@ -39,8 +39,5 @@ public abstract class Person implements Payable, Comparable<Person> {
     public String getPosition(){
         return "Student";
     }
-    //string getPosition() – method (should return either the appropriate position or text “Student”)
-    // Method to get the position    public String getPosition() {
-    // Assuming this is a generic Person class, so returning "Student" by default        return "Adam";
 }
 
