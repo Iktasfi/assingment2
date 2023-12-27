@@ -11,10 +11,12 @@ public class Student  extends Person{
         super(name, surname);
         setGpa(gpa);
     }
-    @Override
+
+    /*
     public String toString() {
         return "Student: " + id + ". " + name + " " + surname;
     }
+     */
 
     //Getters and setters
 
@@ -25,5 +27,12 @@ public class Student  extends Person{
         this.gpa = gpa;
     }
 
+    @Override
+    public double getPaymentAmount() {
+        if (gpa > 2.67){
+            return 36660.00;
+        }
+        return 0;
+    }
 }
 

@@ -16,10 +16,11 @@ public class Employee extends Person {    // Static variable to automatically se
     // toString method
     @Override
     public String toString() {
-        return  position + ": " + id + ". " + name + " " + surname;
+            return  getPosition() + ": " + id + ". " + name + " " + surname;
     }
     // Getters and setters
-
+//return  position + ": " + id + ". " + name + " " + surname;
+    @Override
     public String getPosition() {
         return position;
     }
@@ -33,4 +34,8 @@ public class Employee extends Person {    // Static variable to automatically se
         this.salary = salary;
     }
 
+    @Override
+    public double getPaymentAmount() {
+        return salary;
+    }
 }

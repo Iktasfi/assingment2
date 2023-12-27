@@ -1,5 +1,5 @@
 package SOMEPACKAGE;
-public class Person {
+public abstract class Person implements Payable {
     protected static int nextId = 1;
     // Instance variables
     protected int id;
@@ -31,7 +31,10 @@ public class Person {
     }
     @Override
     public String toString() {
-        return id + ". " + name + " " + surname;
+        return "Student: " + id + ". " + name + " " + surname;
+    }
+    public String getPosition(){
+        return null;
     }
     //string getPosition() – method (should return either the appropriate position or text “Student”)
     // Method to get the position    public String getPosition() {
