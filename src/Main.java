@@ -8,12 +8,12 @@ import java.util.Scanner;
 import java.util.List;
 public class Main {
     public static void printData(Iterable<Person> people)  {
-        List<Person> peopleList = new ArrayList<>();
-        people.forEach(peopleList::add);
+        List<Person> T = new ArrayList<>();
+        people.forEach(T::add);
 
-        Collections.sort(peopleList);
+        Collections.sort(T);
 
-        for (Person person : peopleList) {
+        for (Person person : T) {
             System.out.println(person + " earns " + person.getSalary());
         }
     }
