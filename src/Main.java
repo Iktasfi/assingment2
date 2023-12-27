@@ -2,22 +2,39 @@ import SOMEPACKAGE.Person;import SOMEPACKAGE.Student;
 import SOMEPACKAGE.Employee;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.Scanner;
-
+import java.util.List;
 public class Main {
+    public static void printData(Iterable<Person> people)  {
+        List<Person> peopleList = new ArrayList<>();
+        people.forEach(peopleList::add);
+
+        Collections.sort(peopleList);
+
+        for (Person person : peopleList) {
+            System.out.println(person + " earns " + person.getSalary());
+        }
+    }
     public static void main(String[] args) {
+
         ArrayList<Person> people = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
+
         String name;
         String surname;
         String position;
         double gpa;
         double salary;
+
         boolean exit = false;
-        while (true != exit){
+
+        while (true != exit) {
             System.out.println("What do you want?");
             System.out.println("1. Add student. ");
             System.out.println("2. Add employee. ");
+            System.out.println("3. Print data");
             System.out.println("0. End the program. ");
             System.out.println("Enter what do you want.");
 
@@ -55,28 +72,21 @@ public class Main {
                     people.add(new Employee(name, surname, position, salary));
                     System.out.println();
                     break;
+
+
+                case "Print data":
+                    printData(people);
+                    break;
                 case "End the program":
                     exit = true;
                     break;
+                default:
+                    System.out.println("Incorrect command");
             }
         }
 
-        for (Person a : people){
-            System.out.println(a);
-        }
+
 
 
     }
-    /*
-    public void printData(Iterable<Person>){
-Employee paramEmployee = new Employee("John", "Lennon", "Manager", 50000.0);
-        System.out.println(paramEmployee);
-
-        Student paramStudent = new Student("John", "Lennon", 3.8);
-        System.out.println(paramStudent);
-
-        Student AITUStudent = new Student("Artyom", "Lennon", 3.8);
-        System.out.println(AITUStudent);
-    }
-     */
 }

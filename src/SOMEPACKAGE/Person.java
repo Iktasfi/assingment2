@@ -1,16 +1,26 @@
 package SOMEPACKAGE;
-public abstract class Person implements Payable {
+public abstract class Person implements Payable, Comparable<Person> {
+
     protected static int nextId = 1;
-    // Instance variables
     protected int id;
     protected String name;
     protected String surname;
+    protected double salary;
+
+    public double getSalary() {
+        return salary;
+    }
+
+    @Override
+    public int compareTo(Person otherPerson) {
+        // Compare based on salary
+        return Double.compare(this.salary, otherPerson.salary);
+    }
     public Person() {
         this.id = nextId++;
     }
-    // Parameterized constructor
     public Person(String name, String surname) {
-        this(); // Call the default constructor to set the ID
+        this();
         setName(name);
         setSurname(surname);
     }
