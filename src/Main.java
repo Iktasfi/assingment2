@@ -14,7 +14,7 @@ public class Main {
         Collections.sort(T);
 
         for (Person person : T) {
-            System.out.println(person + " earns " + person.getSalary());
+            System.out.println(person + " earns " + person.getPaymentAmount());
         }
     }
     public static void main(String[] args) {

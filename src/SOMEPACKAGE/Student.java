@@ -21,7 +21,6 @@ public class Student  extends Person{
     @Override
     public double getPaymentAmount() {
         if (gpa > 2.67){
-            this.salary = 36660.00;
             return 36660.00;
         }
         return 0;

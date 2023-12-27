@@ -1,6 +1,7 @@
 package SOMEPACKAGE;
 public class Employee extends Person {
     private String position;
+    private double salary;
 
     public Employee() {
 
@@ -33,6 +34,6 @@ public class Employee extends Person {
 
     @Override
     public double getPaymentAmount() {
-        return salary;
+        return getSalary();
     }
 }

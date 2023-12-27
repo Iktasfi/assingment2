@@ -5,16 +5,10 @@ public abstract class Person implements Payable, Comparable<Person> {
     protected int id;
     protected String name;
     protected String surname;
-    protected double salary;
-
-    public double getSalary() {
-        return salary;
-    }
-
     @Override
     public int compareTo(Person otherPerson) {
         // Compare based on salary
-        return Double.compare(this.salary, otherPerson.salary);
+        return Double.compare(this.getPaymentAmount(), otherPerson.getPaymentAmount());
     }
     public Person() {
         this.id = nextId++;
