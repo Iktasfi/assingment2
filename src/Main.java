@@ -72,12 +72,11 @@ public class Main {
                 case "Print data":
                     Collections.sort(people);
                     printData(people);
+                    System.out.println();
                     break;
                 case "End the program":
                     exit = true;
                     break;
-                default:
-                    System.out.println("Incorrect command");
             }
         }
     }
