@@ -9,14 +9,17 @@ public abstract class Person implements Payable, Comparable<Person> {
     public int compareTo(Person otherPerson) {
         return Double.compare(this.getPaymentAmount(), otherPerson.getPaymentAmount());
     }
+
     public Person() {
         this.id = nextId++;
     }
+
     public Person(String name, String surname) {
         this();
         setName(name);
         setSurname(surname);
     }
+
     public int getId() {
         return id;
     }

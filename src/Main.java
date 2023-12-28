@@ -8,12 +8,7 @@ import java.util.Scanner;
 import java.util.List;
 public class Main {
     public static void printData(Iterable<Person> people)  {
-        List<Person> T = new ArrayList<>();
-        people.forEach(T::add);
-
-        Collections.sort(T);
-
-        for (Person person : T) {
+        for (Person person : people) {
             System.out.println(person + " earns " + person.getPaymentAmount());
         }
     }
@@ -75,6 +70,7 @@ public class Main {
 
 
                 case "Print data":
+                    Collections.sort(people);
                     printData(people);
                     break;
                 case "End the program":
