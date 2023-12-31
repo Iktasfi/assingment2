@@ -1,4 +1,5 @@
 package SOMEPACKAGE;
+
 public class Employee extends Person {
     private String position;
     private double salary;
@@ -25,6 +26,7 @@ public class Employee extends Person {
     public double getSalary() {
         return salary;
     }
+
     public void setSalary(double salary) {
         this.salary = salary;
     }

@@ -1,4 +1,5 @@
-import SOMEPACKAGE.Person;import SOMEPACKAGE.Student;
+import SOMEPACKAGE.Person;
+import SOMEPACKAGE.Student;
 import SOMEPACKAGE.Employee;
 
 import java.util.ArrayList;
@@ -6,12 +7,14 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.List;
+
 public class Main {
-    public static void printData(Iterable<Person> people)  {
+    public static void printData(Iterable<Person> people) {
         for (Person person : people) {
             System.out.println(person + " earns " + person.getPaymentAmount());
         }
     }
+
     public static void main(String[] args) {
 
         ArrayList<Person> people = new ArrayList<>();
@@ -24,18 +27,19 @@ public class Main {
         double salary;
 
         boolean exit = false;
+        System.out.println("What do you want?");
+        System.out.println("1. Add student. ");
+        System.out.println("2. Add employee. ");
+        System.out.println("3. Print data");
+        System.out.println("0. End the program. ");
+        System.out.println("Enter what do you want.");
 
         while (true != exit) {
-            System.out.println("What do you want?");
-            System.out.println("1. Add student. ");
-            System.out.println("2. Add employee. ");
-            System.out.println("3. Print data");
-            System.out.println("0. End the program. ");
-            System.out.println("Enter what do you want.");
+
 
             String answer = scanner.nextLine();
 
-            switch (answer){
+            switch (answer) {
                 case "Add student":
                     System.out.print("Enter name: ");
                     name = scanner.nextLine();
@@ -48,7 +52,6 @@ public class Main {
                     people.add(new Student(name, surname, gpa));
                     System.out.println();
                     break;
-
 
 
                 case "Add employee":
