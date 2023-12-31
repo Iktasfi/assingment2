@@ -33,7 +33,7 @@ public class Main {
         System.out.println("3. Print data");
         System.out.println("0. End the program. ");
         System.out.println("Enter what do you want.");
-
+        System.out.println();
         while (true != exit) {
 
 
