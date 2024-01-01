@@ -28,5 +28,9 @@ public class Student extends Person {
         }
         return 0;
     }
+    @Override
+    public String getPosition(){
+        return "Student";
+    }
 }
 

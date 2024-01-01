@@ -70,15 +70,16 @@ public class Main {
                     System.out.println();
                     break;
 
-
                 case "Print data":
                     Collections.sort(people);
                     printData(people);
                     System.out.println();
                     break;
+
                 case "End the program":
                     exit = true;
                     break;
+
             }
         }
     }

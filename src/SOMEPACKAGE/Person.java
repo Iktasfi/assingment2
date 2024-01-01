@@ -47,8 +47,6 @@ public abstract class Person implements Payable, Comparable<Person> {
         return getPosition() + ": " + id + ". " + name + " " + surname;
     }
 
-    public String getPosition() {
-        return "Student";
-    }
+    public abstract String getPosition();
 }
 
