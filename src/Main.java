@@ -11,7 +11,7 @@ import java.util.List;
 public class Main {
     public static void printData(Iterable<Person> people) {
         for (Person person : people) {
-            System.out.println(person + " earns " + person.getPaymentAmount());
+            System.out.println(person + " earns " + person.getPaymentAmount() + " tenge");
         }
     }
 
