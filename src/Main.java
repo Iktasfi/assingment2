@@ -4,9 +4,8 @@ import SOMEPACKAGE.Employee;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.Scanner;
-import java.util.List;
+
 
 public class Main {
     public static void printData(Iterable<Person> people) {
@@ -33,7 +32,7 @@ public class Main {
         System.out.println("3. Print data");
         System.out.println("0. End the program. ");
         System.out.println("Enter what do you want.");
-        while (true != exit) {
+        while (!exit) {
 
 
             String answer = scanner.nextLine();

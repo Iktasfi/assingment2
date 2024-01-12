@@ -2,7 +2,7 @@ package SOMEPACKAGE;
 
 public abstract class Person implements Payable, Comparable<Person> {
 
-    protected static int nextId = 1;
+    protected static int nextId = 1; //this();
     protected int id;
     protected String name;
     protected String surname;
